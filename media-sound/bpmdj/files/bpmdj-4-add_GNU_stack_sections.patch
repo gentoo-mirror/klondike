@@ -1,0 +1,34 @@
+2010-11-10	Francisco Blas Izquierdo Riera <klondike@xiscosoft.es>
+
+		(No bug)
+		* compile: 			Add the .note.GNU-stack so there are no problems on hardened
+
+diff -ru -x define bpm2/compile bpm1/compile
+--- bpm2/compile	2009-12-03 13:02:13.000000000 +0100
++++ bpm1/compile	2011-02-17 04:00:52.047625729 +0100
+@@ -31,21 +31,25 @@
+ else
+ OBJCOPYPARMS=-B i386 -O elf32-i386 
+ endif
++OBJCOPYPARMS+= --add-section .note.GNU-stack=GNU-stack
+ 
+ %-ogg.o: %.ogg
+ 	@echo "  [obj] "$@
++	@printf '\000' >GNU-stack
+ 	@objcopy -I binary $(OBJCOPYPARMS)\
+ 		 --rename-section .data=.rodata,alloc,load,readonly,data,contents \
+ 		 $< $@
+ 
+ %-mp3.o: %.mp3
+ 	@echo "  [obj] "$@
++	@printf '\000' >GNU-stack
+ 	@objcopy -I binary $(OBJCOPYPARMS) \
+ 		 --rename-section .data=.rodata,alloc,load,readonly,data,contents \
+ 		 $< $@
+ 
+ %-png.o: %.png
+ 	@echo "  [obj] "$@ 
++	@printf '\000' >GNU-stack
+ 	@objcopy -I binary $(OBJCOPYPARMS) \
+ 		--rename-section .data=.rodata,alloc,load,readonly,data,contents \
+ 		 $< $@
