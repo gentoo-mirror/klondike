@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/base16-bytestring
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*base16-bytestring-0.1.1.1 (14 Mar 2011)
+
+  14 Mar 2011; Francisco Blas Izquierdo Riera (klondike)
+  +base16-bytestring-0.1.1.1.ebuild, +metadata.xml:
+  Initial commit
+
