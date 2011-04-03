@@ -1,4 +1,4 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.118.0.ebuild,v 1.4 2010/06/12 17:15:24 aballier Exp $
 
@@ -27,6 +27,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-sparc-cpuinfo.patch"
 	epatch "${FILESDIR}/${P}-debug.patch"
+	epatch "${FILESDIR}/${PN}-fix-alsa-capture-only.patch"
 }
 
 src_compile() {

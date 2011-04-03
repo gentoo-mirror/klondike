@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/jack-audio-connection-kit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.126 2010/06/12 17:15:24 aballier Exp $
+
+  03 Apr 2011; Francisco Blas Izquierdo Riera (klondike)
+  jack-audio-connection-kit-0.118.0.ebuild,
+  +files/jack-audio-connection-kit-fix-alsa-capture-only.patch:
+  Patch the alsa driver so it can support capture only
 
   12 Jun 2010; Alexis Ballier <aballier@gentoo.org>
   jack-audio-connection-kit-0.118.0.ebuild,
