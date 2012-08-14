@@ -30,7 +30,6 @@ DEPEND="${RDEPEND}
 	ruby? ( >=dev-ruby/rubygems-1.8 )
 	doc? ( >=app-text/asciidoc-8.6 )"
 
-
 #This sets some useful variables needed for configure and install
 pkg_setup() {
 	if use x86; then
