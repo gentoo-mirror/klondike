@@ -110,6 +110,8 @@ src_install() {
 	doexe "build/$tmode-default-$tarch/bin/"adchppd
 	doexe "build/$tmode-default-$tarch/bin/"*.so
 	keepdir "$logpath"
+	fowners root:adchpp  "$logpath"
+	fperms 0770 "$logpath"
 	insinto "$etcpath"
 	doins etc/adchpp.xml
 	fowners root:adchpp  "$etcpath"
@@ -133,6 +135,10 @@ src_install() {
 		doins plugins/Script/examples/*
 		fperms 0750 "$sharepath/scripts"
 		fowners root:adchpp  "$sharepath/scripts"
+		keepdir "$etcpath/FL_DataBase"
+		fowners adchpp:adchpp "$etcpath/FL_DataBase"
+		fperms 0770 "$etcpath/FL_DataBase"
+		dosym "$etcpath/FL_DataBase" "$sharepath/scripts/FL_DataBase"
 	fi
 	if use ruby; then
 		insinto "$sharepath"
