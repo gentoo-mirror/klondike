@@ -122,6 +122,9 @@ src_install() {
 		keepdir "$etcpath/certs"
 		fperms 0700 "$etcpath/certs"
 		fowners adchpp:adchpp  "$etcpath/certs"
+		keepdir "$etcpath/certs/trusted"
+		fperms 0700 "$etcpath/certs/trusted"
+		fowners adchpp:adchpp  "$etcpath/certs/trusted"
 	fi
 	if use script; then
 		insinto "$etcpath"
