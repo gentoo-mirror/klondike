@@ -1,0 +1,18 @@
+# ChangeLog for net-p2p/adchpp
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*adchpp-2.8.1 (14 Aug 2012)
+*adchpp-2.8.0 (14 Aug 2012)
+
+  14 Aug 2012; Francisco Blas Izquierdo Riera (klondike) +adchpp-2.8.0.ebuild,
+  +files/adchpp-2.8.0-allow_set_optional_features.patch,
+  +files/adchpp-2.8.0-fix_config_paths.patch,
+  +files/adchpp-2.8.0-fix_doc_includes.patch,
+  +files/adchpp-2.8.0-fix_guide_paths.patch,
+  +files/adchpp-2.8.0-fix_python.patch, +files/adchpp-2.8.0-fix_ruby.patch,
+  +adchpp-2.8.1.ebuild, +files/adchpp-2.8.1-fix_python.patch, +TODO,
+  +files/adchpp.conf.d, +files/adchpp.init.d, +files/adchpp_runner.sh,
+  +metadata.xml:
+  Adding adchpp-2.8.0 and 2.8.1
+

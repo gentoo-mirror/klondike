@@ -1,0 +1,19 @@
+diff -ru adchpp_2.8.1_source.old//swig/SConscript adchpp_2.8.1_source//swig/SConscript
+--- adchpp_2.8.1_source.old//swig/SConscript	2012-08-14 18:23:20.031652036 +0200
++++ adchpp_2.8.1_source//swig/SConscript	2012-08-14 18:32:07.808622076 +0200
+@@ -194,10 +194,11 @@
+ if 'ruby' in dev.env['langs']:
+ 	buildRbModule()
+ 
+-if 'python' in dev.env['langs'] and dev.env['arch'] == 'x86':
+-	buildPyModule()
+-else:
+-	print 'Skipping Python module because ARCH != x86'
++if 'python' in dev.env['langs']:
++	if   dev.env['PLATFORM'] == 'win32' and dev.env['arch'] != 'x86':
++		print 'Skipping Python module because MSVC is used and ARCH != x86'
++	else:
++		buildPyModule()
+ 
+ if 'lua' in dev.env['langs']:
+ 	buildLuaModule()

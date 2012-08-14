@@ -1,0 +1,64 @@
+diff -ru adchpp_2.8.0_source.orig//SConstruct adchpp_2.8.0_source//SConstruct
+--- adchpp_2.8.0_source.orig//SConstruct	2012-02-24 07:15:25.533177571 +0100
++++ adchpp_2.8.0_source//SConstruct	2012-02-24 07:58:26.833183063 +0100
+@@ -70,6 +70,7 @@
+ import os,sys,distutils.sysconfig
+ 
+ plugins = filter(lambda x: os.path.isfile(os.path.join('plugins', x, 'SConscript')), os.listdir('plugins'))
++langs = ['lua', 'python', 'ruby']
+ 
+ defEnv = Environment(ENV = os.environ)
+ opts = Variables('custom.py', ARGUMENTS)
+@@ -83,6 +84,8 @@
+ 	EnumVariable('tools', 'Toolset to compile with, default = platform default (msvc under windows)', tooldef, ['mingw', 'default']),
+ 	EnumVariable('mode', 'Compile mode', 'debug', ['debug', 'release']),
+ 	ListVariable('plugins', 'The plugins to compile', 'all', plugins),
++	ListVariable('langs', 'The language bindings to compile', 'all', langs),
++	BoolVariable('ssl', 'Add support for SSL connections through openssl', 'yes'),
+ 	BoolVariable('gch', 'Use GCH when compiling GUI (disable if you have linking problems with mingw)', 'yes'),
+ 	BoolVariable('verbose', 'Show verbose command lines', 'no'),
+ 	BoolVariable('savetemps', 'Save intermediate compilation files (assembly output)', 'no'),
+@@ -195,10 +198,10 @@
+ 	if not dev.is_win32():
+ 		if conf.CheckLib('pthread', 'pthread_create'):
+ 			conf.env.Append(CPPDEFINES=['HAVE_PTHREAD'])
+-		if conf.CheckLib('ssl', 'SSL_connect'):
++		if env['ssl'] and conf.CheckLib('ssl', 'SSL_connect'):
+ 			conf.env.Append(CPPDEFINES=['HAVE_OPENSSL'])
+ 	else:
+-		if os.path.exists(Dir('#/openssl/include').abspath):
++		if env['ssl'] and os.path.exists(Dir('#/openssl/include').abspath):
+ 			conf.env.Append(CPPDEFINES=['HAVE_OPENSSL'])
+ 	
+ 	env = conf.Finish()
+@@ -217,7 +220,8 @@
+ dev.build('adchppd/')
+ 
+ # Lua for plugins & swig
+-dev.build('lua/')
++if 'Script' in env['plugins'] or 'lua' in env['langs']:
++	dev.build('lua/')
+ 
+ # Library wrappers
+ dev.build('swig/')
+diff -ru adchpp_2.8.0_source.orig//swig/SConscript adchpp_2.8.0_source//swig/SConscript
+--- adchpp_2.8.0_source.orig//swig/SConscript	2012-02-24 07:15:25.531177571 +0100
++++ adchpp_2.8.0_source//swig/SConscript	2012-02-24 07:57:38.612182979 +0100
+@@ -188,11 +188,14 @@
+ 	php_adchpp = env.SharedLibrary(target, sources, SHLIBPREFIX='')
+ 	targets.append(php_adchpp)
+ 
+-buildRbModule()
++if 'ruby' in dev.env['langs']:
++	buildRbModule()
+ 
+-buildPyModule()
++if 'python' in dev.env['langs']:
++	buildPyModule()
+ 
+-buildLuaModule()
++if 'lua' in dev.env['langs']:
++	buildLuaModule()
+ 
+ # TODO buildPHPModule()
+ 
