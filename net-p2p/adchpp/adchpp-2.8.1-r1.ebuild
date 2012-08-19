@@ -86,6 +86,7 @@ src_configure() {
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.8.0-fix_config_paths.patch"
 	epatch "${FILESDIR}/${PN}-2.8.1-fix_python.patch"
+	epatch "${FILESDIR}/${PN}-2.8.1-fix_disconnect_signal.patch"
 	sed -e "s:%%ADCHPPLIB%%:$libpath:g" \
 		"${FILESDIR}/adchpp_runner.sh" > adchpp_runner.sh
 	sed -e "s:%%ADCHPPLIB%%:$libpath:g" \
