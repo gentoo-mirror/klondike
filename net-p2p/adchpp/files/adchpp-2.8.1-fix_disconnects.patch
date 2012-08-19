@@ -1,0 +1,45 @@
+=== modified file 'swig/adchpp.i'
+--- swig/adchpp.i	2012-08-04 19:35:03 +0000
++++ swig/adchpp.i	2012-08-12 16:46:52 +0000
+@@ -587,8 +587,6 @@
+ 
+ 	size_t getQueuedBytes() throw();
+ 
+-	/** @param reason The statistic to update */
+-	void disconnect(DCReason reason, const std::string &) throw();
+ 	const std::string& getIp() const throw();
+ 
+ 	/**
+@@ -599,8 +597,11 @@
+ 	void setDataMode(const DataFunction& handler, int64_t aBytes);
+ 
+ 	%extend{
+-		void disconnect(DCReason reason) {
+-			self->disconnect(reason, Util::emptyString);
++		void disconnect(int reason) {
++			self->disconnect(static_cast<DCReason>(reason), Util::emptyString);
++		}
++		void disconnect(int reason, const std::string& info) {
++			self->disconnect(static_cast<DCReason>(reason), info);
+ 		}
+ 	}
+ };
+@@ -611,11 +612,13 @@
+ 
+ 	using Entity::send;
+ 	virtual void send(const BufferPtr& cmd);
+-	
+-	virtual void disconnect(DCReason reason, const std::string &);
++
+ 	%extend{
+-		void disconnect(DCReason reason) {
+-			self->disconnect(reason, Util::emptyString);
++		void disconnect(int reason) {
++			self->disconnect(static_cast<DCReason>(reason), Util::emptyString);
++		}
++		void disconnect(int reason, const std::string& info) {
++			self->disconnect(static_cast<DCReason>(reason), info);
+ 		}
+ 	}
+ };
+
