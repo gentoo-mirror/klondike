@@ -70,7 +70,6 @@ src_configure() {
 	use script && myplugins=$myplugins,Script
 
 	myesconsargs=(
-#		CC="$(tc-getCC)"
 		plugins=$myplugins
 		langs=$mylangs
 		mode=$tmode
@@ -88,6 +87,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.8.1-fix_python.patch"
 	epatch "${FILESDIR}/${PN}-2.8.1-fix_disconnect_signal.patch"
 	epatch "${FILESDIR}/${PN}-2.8.1-fix_disconnects.patch"
+	epatch "${FILESDIR}/${PN}-2.8.1-fix_cflags.patch"
 	sed -e "s:%%ADCHPPLIB%%:$libpath:g" \
 		"${FILESDIR}/adchpp_runner.sh" > adchpp_runner.sh
 	sed -e "s:%%ADCHPPLIB%%:$libpath:g" \
@@ -99,6 +99,10 @@ src_prepare() {
 }
 
 src_compile() {
+	tc-export CC CXX
+	export LINKFLAGS="${LDFLAGS}"
+	export CCFLAGS="${CFLAGS}"
+	export CCFLAGS="${CXXFLAGS}"
 	escons || die
 }
 
