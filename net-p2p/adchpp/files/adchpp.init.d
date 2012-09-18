@@ -10,7 +10,7 @@ depend() {
 
 start() {
 	ebegin "Starting adch++"
-	start-stop-daemon --start --pidfile /var/run/adchppd.pid -u ${ADCHPP_USER}:${ADCHPP_GROUP} -m -b /usr/bin/adchppd ${ADCHPP_OPTS}
+	start-stop-daemon --start --pidfile /var/run/adchppd.pid -u ${ADCHPP_USER}:${ADCHPP_GROUP} -m -b /usr/bin/adchppd -- ${ADCHPP_OPTS}
 	eend $?
 }
 

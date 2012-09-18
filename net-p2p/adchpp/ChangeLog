@@ -2,6 +2,9 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 Sep 2012; Francisco Blas Izquierdo Riera (klondike) files/adchpp.init.d:
+  Fixing bug in start-stop-daemon call in init file
+
 *adchpp-2.8.1-r3 (17 Sep 2012)
 
   17 Sep 2012; Francisco Blas Izquierdo Riera (klondike)
