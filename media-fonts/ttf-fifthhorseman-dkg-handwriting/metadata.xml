@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>klondike@xiscosoft.es</email>
+		<name>Francisco Blas Izquierdo Riera</name>
+	</maintainer>
+	<use>
+		<flag name="fontforge">
+			Use fontforge to build the ttf files
+		</flag>
+	</use>
+</pkgmetadata>
