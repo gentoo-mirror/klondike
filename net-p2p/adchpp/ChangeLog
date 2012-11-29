@@ -2,6 +2,9 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  29 Nov 2012; Francisco Blas Izquierdo Riera (klondike) files/adchpp.init.d:
+  Added support for stacked configurations
+
   18 Sep 2012; Francisco Blas Izquierdo Riera (klondike) files/adchpp.init.d:
   Fixing bug in start-stop-daemon call in init file
 

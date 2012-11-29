@@ -8,14 +8,16 @@ depend() {
 	need net
 }
 
+PIDFILE=/var/run/${RC_SVCNAME}.pid
+
 start() {
-	ebegin "Starting adch++"
-	start-stop-daemon --start --pidfile /var/run/adchppd.pid -u ${ADCHPP_USER}:${ADCHPP_GROUP} -m -b /usr/bin/adchppd -- ${ADCHPP_OPTS}
+	ebegin "Starting adch++ ${RC_SVCNAME}"
+	start-stop-daemon --start --pidfile "${PIDFILE}" -u ${ADCHPP_USER}:${ADCHPP_GROUP} -m -b /usr/bin/adchppd -- ${ADCHPP_OPTS}
 	eend $?
 }
 
 stop() {
-	ebegin "Stopping adch++"
-	start-stop-daemon --stop --pidfile /var/run/adchppd.pid -R SIGINT/5
+	ebegin "Stopping adch++ ${RC_SVCNAME}"
+	start-stop-daemon --stop --pidfile "${PIDFILE}" -R SIGINT/5
 	eend $?
 }
