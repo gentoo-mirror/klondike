@@ -1,0 +1,118 @@
+=== modified file 'changelog.txt'
+--- changelog.txt	2012-11-26 17:28:07 +0000
++++ changelog.txt	2013-02-07 21:44:55 +0000
+@@ -1,4 +1,5 @@
+ * Improve Lua scripts
++* [L#1118699] Normalize per-entity data storage from Lua
+ 
+ -- 2.9.0 2012-10-23 --
+ * Add Lua FileSystem
+
+=== modified file 'plugins/Script/examples/access.lua'
+--- plugins/Script/examples/access.lua	2012-11-26 17:28:07 +0000
++++ plugins/Script/examples/access.lua	2013-02-07 21:44:55 +0000
+@@ -104,7 +104,7 @@
+ local pm = adchpp.getPM()
+ local sm = adchpp.getSM()
+ 
+-local saltsHandle = pm:registerByteVectorData()
++local saltsHandle = pm:registerPluginData()
+ 
+ -- forward declarations.
+ local cut_str,
+@@ -892,7 +892,7 @@
+ 
+ 	autil.reply(c, "You are registered, please provide a password")
+ 
+-	c:setByteVectorData(saltsHandle, cm:enterVerify(c, true))
++	c:setPluginData(saltsHandle, cm:enterVerify(c, true))
+ 	return false
+ end
+ 
+@@ -902,7 +902,7 @@
+ 		return false
+ 	end
+ 
+-	local salt = c:getByteVectorData(saltsHandle)
++	local salt = c:getPluginData(saltsHandle)
+ 
+ 	if not salt then
+ 		autil.dump(c, adchpp.AdcCommand_ERROR_PROTOCOL_GENERIC, "You didn't get any salt?")
+
+=== modified file 'swig/lua.i'
+--- swig/lua.i	2012-08-04 19:24:47 +0000
++++ swig/lua.i	2013-02-07 21:44:55 +0000
+@@ -1,4 +1,5 @@
+ %module luadchpp
++%include "lua_fnptr.i"
+ 
+ /*
+ in addition to the elements defined here and in adchpp.i, the Lua interface also includes:
+@@ -9,6 +10,15 @@
+ before a script is being loaded or unloaded. return true to discard further processing.
+ */
+ 
++%inline %{
++/* Deleter for per-entity objects */
++static void free_lua_ref(void *data) {
++	SWIGLUA_REF *ref = reinterpret_cast<SWIGLUA_REF*> (data);
++	swiglua_ref_clear(ref);
++	delete ref;
++}
++%}
++
+ typedef unsigned int size_t;
+ 
+ %{
+@@ -307,38 +317,22 @@
+ }
+ 
+ %extend adchpp::Entity {
+-	std::string getStringData(const PluginDataHandle& handle) {
+-		void* ret = $self->getPluginData(handle);
+-		if(ret) {
+-			return *reinterpret_cast<std::string*>(ret);
+-		}
+-		return std::string();
+-	}
+-
+-	void setStringData(const PluginDataHandle& handle, std::string data) {
+-		$self->setPluginData(handle, reinterpret_cast<void*>(new std::string(data)));
+-	}
+-
+-	ByteVector getByteVectorData(const PluginDataHandle& handle) {
+-		void* ret = $self->getPluginData(handle);
+-		if(ret) {
+-			return *reinterpret_cast<ByteVector*>(ret);
+-		}
+-		return ByteVector();
+-	}
+-
+-	void setByteVectorData(const PluginDataHandle& handle, ByteVector data) {
+-		$self->setPluginData(handle, reinterpret_cast<void*>(new ByteVector(data)));
++	SWIGLUA_REF getPluginData(const PluginDataHandle& handle) {
++		void* ret = $self->getPluginData(handle);
++		if(ret) {
++			return *reinterpret_cast<SWIGLUA_REF*>(ret);
++		}
++		return {0, 0};
++	}
++
++	void setPluginData(const PluginDataHandle& handle, SWIGLUA_REF data) {
++		$self->setPluginData(handle, reinterpret_cast<void*>(new SWIGLUA_REF(data)));
+ 	}
+ }
+ 
+ %extend adchpp::PluginManager {
+-	PluginDataHandle registerStringData() {
+-		return self->registerPluginData(PluginData::simpleDataDeleter<std::string>);
+-	}
+-
+-	PluginDataHandle registerByteVectorData() {
+-		return self->registerPluginData(PluginData::simpleDataDeleter<ByteVector>);
++	PluginDataHandle registerPluginData() {
++		return self->registerPluginData(free_lua_ref);
+ 	}
+ }
+ 
+
