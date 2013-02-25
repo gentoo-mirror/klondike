@@ -74,6 +74,9 @@ src_configure() {
 	myplugins=""
 	use bloom && myplugins=$myplugins,Bloom
 	use script && myplugins=$myplugins,Script
+	
+	systemlua="no"
+	! use ia64 && use systemlua && systemlua=yes
 
 	myesconsargs=(
 		plugins=$myplugins
@@ -82,7 +85,7 @@ src_configure() {
 		$(use_scons ssl secure)
 		$(use_scons pch gch)
 		$(use_scons doc docs)
-		$(use_scons systemlua)
+		systemlua=$systemlua
 		arch=$tarch
 #to use propper ruby
 		ruby=ruby19
