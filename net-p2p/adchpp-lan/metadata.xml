@@ -12,5 +12,8 @@
 		<flag name="script">
       			Build the scripting extension
 		</flag>
+		<flag name="systemlua">
+      			Use the system's lua libraries instead of the embedded ones
+		</flag>
 	</use>
 </pkgmetadata>

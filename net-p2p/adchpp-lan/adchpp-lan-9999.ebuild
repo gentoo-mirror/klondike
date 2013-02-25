@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~x86"
 
-IUSE="+bloom debug doc +lua pch +python +ruby +script +ssl"
+IUSE="+bloom debug doc +lua pch +python +ruby +script +ssl +systemlua"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	python? ( || ( dev-lang/python:2.5 dev-lang/python:2.6 dev-lang/python:2.7 ) )
@@ -25,6 +25,15 @@ DEPEND="${RDEPEND}
 	>=dev-lang/swig-1.3.40
 	>=sys-devel/gcc-4.4
 	ruby? ( >=dev-ruby/rubygems-1.8 )
+	lua? (
+		!ia64? (
+			systemlua? (
+				~dev-lang/lua-5.1.4
+				~dev-lua/luafilesystem-1.5.0
+				~dev-lua/luasocket-2.0.2
+			)
+		)
+	)
 	doc? ( >=app-text/asciidoc-8.6 )"
 
 #This sets some useful variables needed for configure and install
@@ -73,9 +82,12 @@ src_configure() {
 		$(use_scons ssl secure)
 		$(use_scons pch gch)
 		$(use_scons doc docs)
+		$(use_scons systemlua)
 		arch=$tarch
 #to use propper ruby
 		ruby=ruby19
+#Similar with lua
+		lua=lua
 	)
 }
 
