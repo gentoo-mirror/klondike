@@ -3,6 +3,10 @@
 # $Header: $
 
   25 Feb 2013; Francisco Blas Izquierdo Riera (klondike)
+  adchpp-lan-9999.ebuild, metadata.xml:
+  Adding support for using the system boost libraries
+
+  25 Feb 2013; Francisco Blas Izquierdo Riera (klondike)
   adchpp-lan-9999.ebuild:
   Fix ia64
 

@@ -13,7 +13,10 @@
       			Build the scripting extension
 		</flag>
 		<flag name="systemlua">
-      			Use the system's lua libraries instead of the embedded ones
+      			Use the system's lua libraries (dev-lang/lua) instead of the embedded ones
+		</flag>
+		<flag name="systemboost">
+			Use the system's boost libraries (dev-libs/boost) instead of the bundled ones
 		</flag>
 	</use>
 </pkgmetadata>

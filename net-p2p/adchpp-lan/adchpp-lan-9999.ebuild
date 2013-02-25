@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~x86"
 
-IUSE="+bloom debug doc +lua pch +python +ruby +script +ssl +systemlua"
+IUSE="+bloom debug doc +lua pch +python +ruby +script +ssl +systemboost +systemlua"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	python? ( || ( dev-lang/python:2.5 dev-lang/python:2.6 dev-lang/python:2.7 ) )
@@ -34,6 +34,7 @@ DEPEND="${RDEPEND}
 			)
 		)
 	)
+	systemboost? ( >=dev-libs/boost-1.49 )
 	doc? ( >=app-text/asciidoc-8.6 )"
 
 #This sets some useful variables needed for configure and install
@@ -74,7 +75,7 @@ src_configure() {
 	myplugins=""
 	use bloom && myplugins=$myplugins,Bloom
 	use script && myplugins=$myplugins,Script
-	
+
 	systemlua="no"
 	! use ia64 && use systemlua && systemlua=yes
 
@@ -85,6 +86,7 @@ src_configure() {
 		$(use_scons ssl secure)
 		$(use_scons pch gch)
 		$(use_scons doc docs)
+		$(use_scons systemboost systemboost)
 		systemlua=$systemlua
 		arch=$tarch
 #to use propper ruby
