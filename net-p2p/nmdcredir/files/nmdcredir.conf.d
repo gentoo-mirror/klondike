@@ -1,4 +1,4 @@
-# /etc/conf.d/adhchpp: config file for /etc/init.d/adchpp
+# /etc/conf.d/nmdcredir: config file for /etc/init.d/nmdcredir
 
 #User under which the server will run
 NMDCREDIR_USER="nmdcredir"
