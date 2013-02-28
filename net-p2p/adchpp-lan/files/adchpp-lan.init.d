@@ -12,7 +12,7 @@ PIDFILE=/var/run/${RC_SVCNAME}.pid
 
 start() {
 	ebegin "Starting adch++ ${RC_SVCNAME}"
-	start-stop-daemon --start --pidfile "${PIDFILE}" -u ${ADCHPP_USER}:${ADCHPP_GROUP} -m -b /usr/bin/adchpp-land -- ${ADCHPP_OPTS}
+	start-stop-daemon -1 "${ADCHPP_LOG}".out -2 "${ADCHPP_LOG}".err  --start --pidfile "${PIDFILE}" -u ${ADCHPP_USER}:${ADCHPP_GROUP} -m -b /usr/bin/adchpp-land -- ${ADCHPP_OPTS}
 	eend $?
 }
 
