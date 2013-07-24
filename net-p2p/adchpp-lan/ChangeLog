@@ -4,6 +4,10 @@
 
   24 Jul 2013; Francisco Blas Izquierdo Riera (klondike)
   adchpp-lan-9999.ebuild:
+  I forgot an s in stats
+
+  24 Jul 2013; Francisco Blas Izquierdo Riera (klondike)
+  adchpp-lan-9999.ebuild:
   Update for new tools
 
   28 Feb 2013; Francisco Blas Izquierdo Riera (klondike)

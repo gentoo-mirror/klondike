@@ -154,7 +154,7 @@ src_install() {
 		fowners root:adchpp  "$sharepath/scripts"
 		insinto "$sharepath/stats-tools"
 		doins stats-tools/*
-		fperms 0750 "$sharepath/stat-tools"
+		fperms 0750 "$sharepath/stats-tools"
 		fowners root:adchpp  "$sharepath/stats-tools"
 		keepdir "$etcpath/FL_DataBase"
 		fowners adchpp:adchpp "$etcpath/FL_DataBase"
