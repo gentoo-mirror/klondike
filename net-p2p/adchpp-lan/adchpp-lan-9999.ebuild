@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 	lua? (
 		!ia64? (
 			systemlua? (
-				~dev-lang/lua-5.1.4
+				=dev-lang/lua-5.1*
 				~dev-lua/luafilesystem-1.5.0
 				~dev-lua/luasocket-2.0.2
 			)
@@ -152,6 +152,10 @@ src_install() {
 		doins plugins/Script/examples/*
 		fperms 0750 "$sharepath/scripts"
 		fowners root:adchpp  "$sharepath/scripts"
+		insinto "$sharepath/stats-tools"
+		doins stats-tools/*
+		fperms 0750 "$sharepath/stat-tools"
+		fowners root:adchpp  "$sharepath/stats-tools"
 		keepdir "$etcpath/FL_DataBase"
 		fowners adchpp:adchpp "$etcpath/FL_DataBase"
 		fperms 0770 "$etcpath/FL_DataBase"

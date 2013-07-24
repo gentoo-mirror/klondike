@@ -2,6 +2,10 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  24 Jul 2013; Francisco Blas Izquierdo Riera (klondike)
+  adchpp-lan-9999.ebuild:
+  Update for new tools
+
   28 Feb 2013; Francisco Blas Izquierdo Riera (klondike)
   files/adchpp-lan.conf.d, files/adchpp-lan.init.d:
   Keep the outputs
