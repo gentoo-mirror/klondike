@@ -2,6 +2,12 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*adchpp-2.11.0 (15 Aug 2013)
+
+  15 Aug 2013; Francisco Blas Izquierdo Riera (klondike) +adchpp-2.11.0.ebuild,
+  +files/adchpp-2.11.0-fix_cflags.patch:
+  Update the ebuild to 2.11.0
+
 *adchpp-2.9.0-r1 (10 Feb 2013)
 *adchpp-2.9.0 (10 Feb 2013)
 
