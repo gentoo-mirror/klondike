@@ -1,0 +1,11 @@
+--2013-09-08 18:19:58--  http://git.overlays.gentoo.org/gitweb/?p=user/mrueg.git;a=blob_plain;f=dev-python/scrypt/ChangeLog;hb=HEAD
+Resolviendo git.overlays.gentoo.org (git.overlays.gentoo.org)... 94.100.119.163
+Conectando con git.overlays.gentoo.org (git.overlays.gentoo.org)[94.100.119.163]:80... conectado.
+Petición HTTP enviada, esperando respuesta... 200 OK
+Longitud: 134 [text/plain]
+Grabando a: “index.html?p=user%2Fmrueg.git;a=blob_plain;f=dev-python%2Fscrypt%2FChangeLog;hb=HEAD”
+
+     0K                                                       100% 19,4M=0s
+
+2013-09-08 18:19:58 (19,4 MB/s) - “index.html?p=user%2Fmrueg.git;a=blob_plain;f=dev-python%2Fscrypt%2FChangeLog;hb=HEAD” guardado [134/134]
+
