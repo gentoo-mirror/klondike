@@ -1,0 +1,27 @@
+diff -ur mozilla-sync-server-reg.orig/syncreg/util.py mozilla-sync-server-reg/syncreg/util.py
+--- mozilla-sync-server-reg.orig/syncreg/util.py	2013-09-09 03:11:28.346826371 +0200
++++ mozilla-sync-server-reg/syncreg/util.py	2013-09-09 03:23:31.707855355 +0200
+@@ -35,10 +35,14 @@
+ # ***** END LICENSE BLOCK *****
+ import os
+ from mako.lookup import TemplateLookup
++from tempfile import mkdtemp
++import atexit
++from shutil import rmtree
+ 
+ _TPL_DIR = os.path.join(os.path.dirname(__file__), 'templates')
++_GEN_TPL_DIR = mkdtemp()
+ _lookup = TemplateLookup(directories=[_TPL_DIR],
+-                         module_directory=_TPL_DIR)  # XXX defined in prod
++                         module_directory=_GEN_TPL_DIR)  # XXX defined in prod, this avoids permission issues
+ 
+ 
+ def render_mako(template, **data):
+@@ -53,3 +57,7 @@
+     """
+     template = _lookup.get_template(template)
+     return template.render(**data)
++
++@atexit.register
++def delete_tpl_temp():
++    rmtree(_GEN_TPL_DIR,True)

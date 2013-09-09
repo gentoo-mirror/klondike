@@ -44,6 +44,8 @@ DEPEND="${RDEPEND}
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
+PATCHES=( ${FILESDIR}/${P}_generate_templates_in_tmp.patch )
+
 python_test() {
 	nosetests || die "Tests fail with ${EPYTHON}"
 }
