@@ -38,11 +38,11 @@ REQUIRED_USE="|| ( ldap memcached mysql sqlite )"
 
 RDEPEND="www-misc/mozilla-sync-server-core[${PYTHON_USEDEP},memcached?,ldap?]
 	memcached? ( >=dev-python/pylibmc-1.2.3[${PYTHON_USEDEP}] )
-	>=dev-python/simplejson-2.6.2
+	>=dev-python/simplejson-2.6.2[${PYTHON_USEDEP}]
 	>=dev-python/webob-1.0.7[${PYTHON_USEDEP}]
-	>=dev-python/sqlalchemy-0.7.9[mysql?,sqlite?]
-	>=dev-python/metlog-py-0.9.8[${PYTHON_USEDEP}]
-	>=dev-python/pastedeploy-1.5.0"
+	>=dev-python/sqlalchemy-0.7.10[${PYTHON_USEDEP},mysql?,sqlite?]
+	>=dev-python/metlog-py-0.10[${PYTHON_USEDEP}]
+	>=dev-python/pastedeploy-1.5.0[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )
 	test? ( >=dev-python/webtest-1.3.3[${PYTHON_USEDEP}] )
