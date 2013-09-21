@@ -14,10 +14,7 @@ S="${WORKDIR}/${PN}_${PV}_source"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~x86"
-#TODOS:
-#Add info on script and bloom uses
-#Python use only on x86 builds
-#Select languages
+
 IUSE="+bloom debug doc +lua pch +python +ruby +script +ssl +systemboost +systemlua"
 
 RDEPEND="ssl? ( dev-libs/openssl )
@@ -28,6 +25,16 @@ DEPEND="${RDEPEND}
 	>=dev-lang/swig-1.3.40
 	>=sys-devel/gcc-4.4
 	ruby? ( >=dev-ruby/rubygems-1.8 )
+	lua? (
+		!ia64? (
+			systemlua? (
+				=dev-lang/lua-5.1*
+				~dev-lua/luafilesystem-1.5.0
+				~dev-lua/luasocket-2.0.2
+			)
+		)
+	)
+	systemboost? ( >=dev-libs/boost-1.52[threads] )
 	doc? ( >=app-text/asciidoc-8.6 )"
 
 #This sets some useful variables needed for configure and install
@@ -69,6 +76,9 @@ src_configure() {
 	use bloom && myplugins=$myplugins,Bloom
 	use script && myplugins=$myplugins,Script
 
+	systemlua="no"
+	! use ia64 && use systemlua && systemlua=yes
+
 	myesconsargs=(
 		plugins=$myplugins
 		langs=$mylangs
@@ -76,9 +86,13 @@ src_configure() {
 		$(use_scons ssl secure)
 		$(use_scons pch gch)
 		$(use_scons doc docs)
+		$(use_scons systemboost systemboost)
+		systemlua=$systemlua
 		arch=$tarch
 #to use propper ruby
 		ruby=ruby19
+#Similar with lua
+		lua=lua
 	)
 }
 
@@ -138,6 +152,7 @@ src_install() {
 		doins plugins/Script/examples/*
 		fperms 0750 "$sharepath/scripts"
 		fowners root:adchpp  "$sharepath/scripts"
+adchpp-2.11.0.ebuild
 		keepdir "$etcpath/FL_DataBase"
 		fowners adchpp:adchpp "$etcpath/FL_DataBase"
 		fperms 0770 "$etcpath/FL_DataBase"

@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>klondike@xiscosoft.es</email>
+		<email>klondike@gentoo.org</email>
 		<name>Francisco Blas Izquierdo Riera</name>
 	</maintainer>
 	<use>
@@ -11,6 +11,12 @@
 		</flag>
 		<flag name="script">
       			Build the scripting extension
+		</flag>
+		<flag name="systemlua">
+      			Use the system's lua libraries (dev-lang/lua) instead of the embedded ones
+		</flag>
+		<flag name="systemboost">
+			Use the system's boost libraries (dev-libs/boost) instead of the bundled ones
 		</flag>
 	</use>
 </pkgmetadata>
