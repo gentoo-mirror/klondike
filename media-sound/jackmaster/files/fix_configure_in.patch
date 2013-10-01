@@ -1,0 +1,43 @@
+2010-11-10	Francisco Blas Izquierdo Riera <klondike@xiscosoft.es>
+
+		(No bug)
+		* configure.in: 		Remove reference to the old AM_PATH_GTK macro and extraneous CFLAGS usage
+
+Fix configure
+
+diff -u jackmaster-0.0.2.orig/configure.in jackmaster-0.0.2/configure.in
+--- jackmaster-0.0.2.orig/configure.in	2011-02-20 09:52:08.309569420 +0100
++++ jackmaster-0.0.2/configure.in	2011-02-20 09:54:47.442569430 +0100
+@@ -12,22 +12,8 @@
+ AC_PROG_LIBTOOL
+ 
+ 
+-STD_OPT_CFLAGS="-march=athlon-xp"
+-
+-MAX_OPT_CFLAGS="-O3 -ffast-math -ftracer"
+-
+-# for gcc3
+-#MAX_OPT_CFLAGS="$MAX_OPT_CFLAGS -fold-unroll-loops"
+-
+-# This actually hurts with buffer-sizes 16-64
+-MAX_OPT_CFLAGS="$MAX_OPT_CFLAGS -fprefetch-loop-arrays"
+-
+-
+-AM_PATH_GTK(1.2.0, , , gthread)
+-if test "$GTK_CFLAGS" = ""; then
+ AM_PATH_GTK_2_0(2.4.0, , AC_MSG_ERROR(Cannot find GTK: Is gtk-config in path?), gthread)
+ AC_DEFINE(USE_GTK_2_0, 1, [Use GTK 2.x])
+-fi
+ 
+ 
+ PKG_CHECK_MODULES(JACK, jack >= 0.80.0)
+@@ -128,9 +114,6 @@
+ fi
+ changequote([,])dnl
+ 
+-CFLAGS="$CFLAGS $STD_OPT_CFLAGS"
+-AC_SUBST(MAX_OPT_CFLAGS)
+-
+ AC_OUTPUT([
+ Makefile
+ src/Makefile
