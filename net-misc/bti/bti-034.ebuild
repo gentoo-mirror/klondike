@@ -1,14 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bti/bti-031.ebuild,v 1.2 2012/05/05 03:20:45 jdhore Exp $
+# $Header: $
 
-EAPI=2
+EAPI=5
 
-inherit bash-completion eutils
+inherit bash-completion-r1 eutils
 
 DESCRIPTION="A command line twitter/identi.ca client"
 HOMEPAGE="http://gregkh.github.com/bti/"
-SRC_URI="mirror://kernel/software/web/bti/${P}.tar.bz2"
+SRC_URI="mirror://kernel/software/web/bti/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,6 +18,7 @@ IUSE=""
 
 RDEPEND="net-misc/curl
 	dev-libs/libxml2
+	dev-libs/json-c
 	dev-libs/libpcre
 	net-libs/liboauth"
 DEPEND="${RDEPEND}
@@ -28,19 +29,15 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	|| ( sys-libs/readline dev-libs/libedit )"
 
-src_prepare() {
-        epatch  "${FILESDIR}/${P}-use_https_on_twitter.patch"
-}
-
-
 src_configure() {
 	econf \
 		--disable-dependency-tracking
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "bti could not be installed"
+	emake DESTDIR="${D}" install || die "${PN} could not be installed"
 	dodoc bti.example README RELEASE-NOTES ||
-		die "bti documentation could not be installed"
-	dobashcompletion bti-bashcompletion
+		die "${PN} documentation could not be installed"
+	newbashcomp ${PN}-bashcompletion ${PN} ||
+		die "${PN} bashcompletion could not be installed"
 }
