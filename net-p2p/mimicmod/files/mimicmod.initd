@@ -9,7 +9,7 @@ description="High performance peer-to-peer hub for the ADC network"
 description_reload="Reload uHub configuration and re-read log file"
 
 command="/usr/bin/uhub"
-command_args="${UHUBOPTIONS}"
+command_args="-p ${pidfile} ${UHUBOPTIONS}"
 pidfile="/var/run/uhub.pid"
 
 depend() {
@@ -23,7 +23,7 @@ start_pre() {
 
 
 stop_post() {
-	rm ${pidfile}
+	rm -f ${pidfile}
 }
 
 reload() {
