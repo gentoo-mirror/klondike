@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 inherit git-2 cmake-utils eutils user
 
 DESCRIPTION="Mod of an high performance peer-to-peer hub for the ADC network"
@@ -43,7 +43,7 @@ src_install() {
 	doins doc/uhub.conf
 	doins doc/users.conf
 	fperms 0700 "/etc/uhub"
-        fowners ${UHUB_USER}:${UHUB_GROUP} "/etc/uhub"
+	fowners ${UHUB_USER}:${UHUB_GROUP} "/etc/uhub"
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/${PN}.logrotate" "${PN}"
 	newconfd "${FILESDIR}/${PN}.confd" "${PN}"

@@ -2,6 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  20 Oct 2014; Francisco Blas Izquierdo Riera (klondike) mimicmod-9999.ebuild:
+  Updating EAPI, fixing repoman complaints
+
   23 Jul 2014; Francisco Blas Izquierdo Riera (klondike) Manifest:
   Fix init.d
 
@@ -11,4 +14,3 @@
   +files/mimicmod.confd, +files/mimicmod.initd, +files/mimicmod.logrotate,
   +metadata.xml:
   Add an ebuild for mimicmod
-
