@@ -87,7 +87,6 @@ multilib_src_configure() {
 	# hardware-accell is disabled on OSX because the asm files force
 	#   GNU-stack (as doesn't support that) and when that's removed ld
 	#   complains about duplicate symbols
-	ECONF_SOURCE=${S} \
 	econf \
 		--htmldir="${EPREFIX}/usr/share/doc/${PF}/html" \
 		--disable-valgrind-tests \
