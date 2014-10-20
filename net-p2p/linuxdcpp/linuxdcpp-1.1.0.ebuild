@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-1.0.3-r1.ebuild,v 1.4 2011/03/28 14:30:10 nirbheek Exp $
 
-EAPI=3
+EAPI=5
 
 inherit eutils
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gcc-4.1
 	media-libs/fontconfig
 	>=dev-util/scons-0.96
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-fix_libnotify_always_enabled.patch"
