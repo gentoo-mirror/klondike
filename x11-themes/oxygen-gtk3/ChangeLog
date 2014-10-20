@@ -1,0 +1,5 @@
+*oxygen-gtk3-1.4.0 (20 Oct 2014)
+
+  20 Oct 2014; Francisco Blas Izquierdo Riera (klondike) +metadata.xml,
+  +oxygen-gtk3-1.4.0.ebuild:
+  Add ebuild for oxygen-gtk3-1.4.0
