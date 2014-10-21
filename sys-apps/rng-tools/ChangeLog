@@ -4,6 +4,10 @@
 
   21 Oct 2014; Francisco Blas Izquierdo Riera (klondike)
   files/rng-tools-5-fix-textrels-on-PIC-x86.patch:
+  Tested by blueness
+
+  21 Oct 2014; Francisco Blas Izquierdo Riera (klondike)
+  files/rng-tools-5-fix-textrels-on-PIC-x86.patch:
   Remove unnecessary undef from patch
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> rng-tools-2-r1.ebuild,

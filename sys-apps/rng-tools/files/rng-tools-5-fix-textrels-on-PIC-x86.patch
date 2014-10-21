@@ -17,6 +17,7 @@ Upstream-status: Not sent yet
 Signed-off-by: Francisco Blas Izquierdo Riera (klondike) <klondike@gentoo.org>
 Reported-by: cilly <cilly@cilly.mine.nu>
 Reported-by: Manuel Rüger <mrueg@gentoo.org>
+Tested-by: Anthony Basile <blueness@gentoo.org>
 
 --- rng-tools/rdrand_asm.S
 +++ rng-tools/rdrand_asm.S
