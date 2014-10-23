@@ -1,0 +1,5 @@
+*uhub-9999 (23 Oct 2014)
+
+  23 Oct 2014; Francisco Blas Izquierdo Riera (klondike) +files/uhub.confd,
+  +files/uhub.initd, +files/uhub.logrotate, +metadata.xml, +uhub-9999.ebuild:
+  Add live ebuild for uhub
