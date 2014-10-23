@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 SCONS_MIN_VERSION=1.2.0
 
-inherit eutils scons-utils toolchain-funcs bzr
+inherit eutils user scons-utils toolchain-funcs bzr
 
 DESCRIPTION="ADC protocol hub made by the people behind DC++ and modified for use at lan parties"
 HOMEPAGE="http://dc4lan.sourceforge.net/"
@@ -28,13 +28,13 @@ DEPEND="${RDEPEND}
 	lua? (
 		!ia64? (
 			systemlua? (
-				=dev-lang/lua-5.1*
+				>=dev-lang/lua-5.1.4 <dev-lang/lua-5.1.5
 				~dev-lua/luafilesystem-1.5.0
 				~dev-lua/luasocket-2.0.2
 			)
 		)
 	)
-	systemboost? ( >=dev-libs/boost-1.49 )
+	systemboost? ( >=dev-libs/boost-1.52[threads] )
 	doc? ( >=app-text/asciidoc-8.6 )"
 
 #This sets some useful variables needed for configure and install

@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/adchpp-lan
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  23 Oct 2014; Francisco Blas Izquierdo Riera (klondike) adchpp-lan-9999.ebuild:
+  Update EAPI and dependencies
 
   24 Jul 2013; Francisco Blas Izquierdo Riera (klondike)
   adchpp-lan-9999.ebuild:
@@ -34,4 +37,3 @@
   +files/adchpp-lan.conf.d, +files/adchpp-lan.init.d, +files/adchpp_runner.sh,
   +metadata.xml:
   Add a live ebuild for the ADCH++ Lan fork
-
