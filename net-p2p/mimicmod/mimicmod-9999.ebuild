@@ -8,11 +8,10 @@ inherit git-2 cmake-utils eutils user
 DESCRIPTION="Mod of an high performance peer-to-peer hub for the ADC network"
 HOMEPAGE="http://uhub.mimic.cz/"
 SRC_URI=""
-EGIT_REPO_URI="git clone git://github.com/mimicmod/uhub"
-KEYWORDS="~amd64 ~x86"
+EGIT_REPO_URI="git://github.com/mimicmod/uhub"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug +ssl systemd"
 
 S="${WORKDIR}/uhub"
