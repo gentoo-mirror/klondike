@@ -1,6 +1,19 @@
 # ChangeLog for net-p2p/adchpp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*adchpp-2.11.2 (23 Oct 2014)
+
+  23 Oct 2014; Francisco Blas Izquierdo Riera (klondike) +adchpp-2.11.2.ebuild,
+  -adchpp-2.11.0-r1.ebuild, -adchpp-2.11.0.ebuild, -adchpp-2.8.0.ebuild,
+  -adchpp-2.8.1-r3.ebuild, -adchpp-2.9.0-r1.ebuild, -adchpp-2.9.0.ebuild,
+  -files/adchpp-2.8.0-fix_guide_paths.patch,
+  -files/adchpp-2.8.0-fix_python.patch, -files/adchpp-2.8.0-fix_ruby.patch,
+  -files/adchpp-2.9.0-add_SWIGLUA_REF.patch,
+  -files/adchpp-2.9.0-fix_cflags.patch, -files/adchpp-2.9.0-fix_listreg.patch,
+  -files/adchpp-2.9.0-fix_luasockets_guide.patch,
+  -files/adchpp-2.9.0-fix_nullptr.patch:
+  Adding adchpp-2.11.2 and removing old ebuilds
 
 *adchpp-2.11.0-r1 (21 Sep 2013)
 
@@ -69,4 +82,3 @@
   +files/adchpp.conf.d, +files/adchpp.init.d, +files/adchpp_runner.sh,
   +metadata.xml:
   Adding adchpp-2.8.0 and 2.8.1
-
