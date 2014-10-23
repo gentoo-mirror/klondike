@@ -2,13 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 inherit git-2 cmake-utils eutils user
 
 DESCRIPTION="Lan focused mod of an high performance peer-to-peer hub for the ADC network"
 HOMEPAGE="http://uhub.mimic.cz/"
 SRC_URI=""
-EGIT_REPO_URI="git clone git://github.com/klondi/mimicmod-lan"
+EGIT_REPO_URI="git://github.com/klondi/mimicmod-lan"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
