@@ -2,6 +2,10 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  23 Oct 2014; Francisco Blas Izquierdo Riera (klondike)
+  random-stream-0.1.1.ebuild:
+  Update ebuild to last EAPI
+
   20 Oct 2014; Francisco Blas Izquierdo Riera (klondike) metadata.xml,
   random-stream-0.1.1.ebuild:
   Fix some repoman issues
