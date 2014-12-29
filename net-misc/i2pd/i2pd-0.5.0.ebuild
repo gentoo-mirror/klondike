@@ -37,9 +37,8 @@ src_configure() {
 	cmake-utils_src_configure
 }
 
-src_install_all() {
+src_install() {
 	cmake-utils_src_install
-	dodoc README.md
 	doman "${FILESDIR}/${PN}.1"
 	keepdir /var/lib/i2pd/
 	fowners "${I2PD_USER}:${I2PD_GROUP}" /var/lib/i2pd/
