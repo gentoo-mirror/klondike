@@ -11,7 +11,7 @@ SRC_URI="https://github.com/PrivacySolutions/${PN}/archive/${PV}.tar.gz -> ${P}.
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="aesni i2p-hardening +library static"
+IUSE="aesni i2p-hardening static"
 
 RDEPEND="!static? ( >=dev-libs/boost-1.46[threads] )
 	!static? ( dev-libs/crypto++ )"
