@@ -1,0 +1,6 @@
+*i2pd-9999 (29 Dec 2014)
+
+  29 Dec 2014; Francisco Blas Izquierdo Riera (klondike) +i2pd-9999.ebuild,
+  +files/99i2pd, +files/i2pd.1, +files/i2pd.conf, +files/i2pd.confd,
+  +files/i2pd.initd, +files/i2pd.logrotate, +files/i2pd.service, +metadata.xml:
+  Initial support for i2pd using a live ebuild

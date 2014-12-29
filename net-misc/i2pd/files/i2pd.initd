@@ -1,0 +1,24 @@
+#!/sbin/runscript
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+description="C++ daemon for accessing the I2P network"
+
+command="/usr/bin/i2pd"
+command_args="${I2PDOPTIONS}"
+pidfile="${I2PD_PID}"
+
+depend() {
+	use dns logger netmount
+}
+
+start_pre() {
+        touch "${I2PD_LOG}" "${I2PD_PID}"
+	chown "${I2PD_USER}:${I2PD_GROUP}" "${I2PD_LOG}" "${I2PD_PID}"
+}
+
+
+stop_post() {
+	rm -f "${I2PD_PID}"
+}
