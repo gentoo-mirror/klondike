@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -65,7 +65,7 @@ RDEPEND="memcached? ( >=dev-python/pylibmc-1.2.3[${PYTHON_USEDEP}] )
 	>=dev-python/wsgiproxy2-0.1[${PYTHON_USEDEP}]
 	>=dev-python/greenlet-0.4[${PYTHON_USEDEP}]
 	>=dev-python/gevent-0.13.8[${PYTHON_USEDEP}]
-	>=net-zope/zope-interface-4.0.1[${PYTHON_USEDEP}]"
+	>=dev-python/zope-interface-4.0.1[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	test? ( >=dev-python/pylibmc-1.2.3[${PYTHON_USEDEP}] )
 	test? ( >=dev-python/python-memcached-1.48[${PYTHON_USEDEP}] )
