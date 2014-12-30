@@ -15,7 +15,7 @@ communicate. All data is wrapped with several layers of encryption, and the
 network is both distributed and dynamic, with no trusted parties.
 
 .PP
-Any of the configuration options below can be used in the \fBDAEMON_ARGS\fR variable in \fI/etc/default/i2pd\fR.
+Any of the configuration options below can be used in the \fI2PDOPTIONS\fR variable in \fI/etc/conf.d/i2pd\fR.
 .BR
 .TP
 \fB\-\-host=\fR
@@ -72,18 +72,17 @@ Port of SAM bridge. Usually \fI7656\fR. SAM will not be enabled if this is not s
 .TP
 \fB\-\-bobport=\fR
 Port of BOB command channel. Usually \fI2827\fR. BOB will not be enabled if this is not set. (default: unset)
-.TP
-\fB\-\-conf=\fR
-Config file (default: \fI~/.i2pd/i2p.conf\fR or \fI/var/lib/i2pd/i2p.conf\fR)
-This parameter will be silently ignored if the specified config file does not exist.
-Options specified on the command line take precedence over those in the config file.
 
 .SH FILES
 .PP
-/etc/default/i2pd
+/etc/conf.d/i2pd
 .RS 4
-i2pd configuration file (when running as a system service)
-
+i2pd service configuration file
+.RE
+.PP
+/etc/i2pd.conf
+.RS 4
+i2pd configuration file (when running as a system service). You may override the parameters here.
 .RE
 .PP
 /var/lib/i2pd/
@@ -94,14 +93,9 @@ i2pd profile directory (when running as a system service, see \fB\-\-service=\fR
 $HOME/.i2pd
 .RS 4
 i2pd profile directory (when running as a normal user)
-.RE
-.PP
-/usr/share/doc/i2pd/examples/hosts.txt.gz
-.RS 4
-default I2P hosts file
 .SH AUTHOR
-This manual page was written by kytv <killyourtv@i2pmail.org> for the Debian system (but may be used by others).
+This manual page was written by kytv <killyourtv@i2pmail.org> for the Debian system (but may be used by others). And adapted by Francisco Blas Izquierdo Riera (klondike) <klondike@gentoo.org> to Gentoo.
 .BR
 Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation
 .BR
-On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL
+On Gentoo systems, the complete text of the GNU General Public License Version 2 can be found in /usr/portage/licenses/GPL-2
