@@ -5,20 +5,20 @@
 
 description="C++ daemon for accessing the I2P network"
 
-command="/usr/bin/i2pd"
-command_args="${I2PDOPTIONS}"
-pidfile="${I2PD_PID}"
-
 depend() {
 	use dns logger netmount
 }
 
-start_pre() {
-        touch "${I2PD_LOG}" "${I2PD_PID}"
-	chown "${I2PD_USER}:${I2PD_GROUP}" "${I2PD_LOG}" "${I2PD_PID}"
+start() {
+        ebegin "Starting ${SVCNAME}"
+	checkpath -f "${I2PD_LOG}" -o "${I2PD_USER}:${I2PD_GROUP}"
+	checkpath -f "${I2PD_PID}" -o "${I2PD_USER}:${I2PD_GROUP}"
+	start-stop-daemon -S -b -u "${I2PD_USER}:${I2PD_GROUP}" -1 "${I2PD_LOG}" /usr/bin/i2pd -- ${I2PDOPTIONS}
+        eend $?
 }
 
-
-stop_post() {
-	rm -f "${I2PD_PID}"
+stop() {
+        ebegin "Stopping ${SVCNAME}"
+	start-stop-daemon -K -p "${I2PD_PID}"
+        eend $?
 }

@@ -1,3 +1,6 @@
+  30 Dec 2014; Francisco Blas Izquierdo Riera (klondike) files/i2pd.initd:
+  Fix the init.d
+
   29 Dec 2014; Francisco Blas Izquierdo Riera (klondike) i2pd-0.5.0.ebuild:
   Another artifact from multilib tests install_all should be install
 
