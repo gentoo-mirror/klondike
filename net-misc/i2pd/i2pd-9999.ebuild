@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=5
-inherit eutils systemd user git-2 cmake-utils
+inherit eutils systemd user git-2 cmake-multilib
 
 DESCRIPTION="A C++ daemon for accessing the I2P anonymous network"
 HOMEPAGE="https://github.com/PrivacySolutions/i2pd"
@@ -12,14 +12,16 @@ EGIT_REPO_URI="git://github.com/PrivacySolutions/i2pd"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="aesni i2p-hardening +library static"
+IUSE="aesni i2p-hardening library static"
 
 RDEPEND="!static? ( >=dev-libs/boost-1.46[threads] )
-	!static? ( dev-libs/crypto++ )"
+	!static? ( dev-libs/crypto++ )
+	library? ( >=dev-libs/boost-1.46[threads,${MULTILIB_USEDEP}] )
+	library? ( dev-libs/crypto++[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
 	static? ( >=dev-libs/boost-1.46[static-libs,threads] )
 	static? ( dev-libs/crypto++[static-libs] )
-	>=dev-util/cmake-2.8
+	>=dev-util/cmake-2.8.5
 	i2p-hardening? ( >=sys-devel/gcc-4.6 )
 	|| ( >=sys-devel/gcc-4.6 >=sys-devel/clang-3.3 )"
 
@@ -28,18 +30,23 @@ I2PD_GROUP="${I2PD_GROUP:-i2pd}"
 
 CMAKE_USE_DIR="${S}/build"
 
-src_configure() {
+multilib_src_configure() {
 	mycmakeargs=(
 		$(cmake-utils_use_with aesni AESNI)
 		$(cmake-utils_use_with i2p-hardening HARDENING)
 		$(cmake-utils_use_with library LIBRARY)
 		$(cmake-utils_use_with static STATIC)
+		$(multilib_is_native_abi && echo -DWITH_BINARY=ON \
+					|| echo -DWITH_BINARY=OFF)
 	)
 	cmake-utils_src_configure
 }
 
-src_install() {
+multilib_src_install() {
 	cmake-utils_src_install
+}
+
+multilib_src_install_all() {
 	dodoc README.md
 	doman "${FILESDIR}/${PN}.1"
 	keepdir /var/lib/i2pd/

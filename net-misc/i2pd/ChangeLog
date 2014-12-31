@@ -1,6 +1,10 @@
   30 Dec 2014; Francisco Blas Izquierdo Riera (klondike) files/i2pd.initd:
   Fix the init.d
 
+  31 Dec 2014; Francisco Blas Izquierdo Riera (klondike) i2pd-9999.ebuild:
+  Fix library creation and multilib (for live branch only as it requires
+  changes by upstream)
+
   30 Dec 2014; Francisco Blas Izquierdo Riera (klondike) files/i2pd.1,
   files/i2pd.conf, files/i2pd.service:
   Improve service handling
