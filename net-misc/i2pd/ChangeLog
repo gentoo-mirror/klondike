@@ -1,9 +1,18 @@
-  30 Dec 2014; Francisco Blas Izquierdo Riera (klondike) files/i2pd.initd:
-  Fix the init.d
+
+
+*i2pd-0.6.0 (06 Jan 2015)
+
+  06 Jan 2015; Francisco Blas Izquierdo Riera (klondike) +i2pd-0.6.0.ebuild,
+  i2pd-9999.ebuild:
+  Bump to 0.6.0 with multilib, disable building for non native arches when lib
+  isn't desired
 
   31 Dec 2014; Francisco Blas Izquierdo Riera (klondike) i2pd-9999.ebuild:
   Fix library creation and multilib (for live branch only as it requires
   changes by upstream)
+
+  30 Dec 2014; Francisco Blas Izquierdo Riera (klondike) files/i2pd.initd:
+  Fix the init.d
 
   30 Dec 2014; Francisco Blas Izquierdo Riera (klondike) files/i2pd.1,
   files/i2pd.conf, files/i2pd.service:

@@ -3,12 +3,11 @@
 # $Header: $
 
 EAPI=5
-inherit eutils systemd user git-2 cmake-multilib
+inherit eutils systemd user cmake-multilib
 
 DESCRIPTION="A C++ daemon for accessing the I2P anonymous network"
 HOMEPAGE="https://github.com/PrivacySolutions/i2pd"
-SRC_URI=""
-EGIT_REPO_URI="git://github.com/PrivacySolutions/i2pd"
+SRC_URI="https://github.com/PrivacySolutions/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
