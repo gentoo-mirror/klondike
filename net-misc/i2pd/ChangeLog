@@ -1,5 +1,9 @@
 
 
+  07 Feb 2015; Francisco Blas Izquierdo Riera (klondike) i2pd-0.5.0.ebuild,
+  i2pd-0.6.0.ebuild, i2pd-9999.ebuild:
+  Backport mgorny's changes
+
   07 Jan 2015; Francisco Blas Izquierdo Riera (klondike) i2pd-0.6.0.ebuild:
   Remove library USE as it doesn't work the expected way
 
