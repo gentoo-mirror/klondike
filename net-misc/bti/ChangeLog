@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bti
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  04 Jun 2015; Francisco Blas Izquierdo Riera (klondike) metadata.xml:
+  Update the metadata.xml with my gentoo e-mail
 
 *bti-034 (08 May 2014)
 
