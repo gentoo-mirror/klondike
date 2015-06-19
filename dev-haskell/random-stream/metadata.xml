@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>klondike@gentoo.org</email>
+		<name>Francisco Blas Izquierdo Riera</name>
+	</maintainer>
+	<use>
+		<flag name='urandom'>Uses /dev/urandom as the random data source</flag>
+		<flag name='openssl'>Uses dev-libs/openssl as the random data source</flag>
+	</use>
+</pkgmetadata>

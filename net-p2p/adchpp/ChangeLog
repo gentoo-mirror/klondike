@@ -1,0 +1,84 @@
+# ChangeLog for net-p2p/adchpp
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*adchpp-2.11.2 (23 Oct 2014)
+
+  23 Oct 2014; Francisco Blas Izquierdo Riera (klondike) +adchpp-2.11.2.ebuild,
+  -adchpp-2.11.0-r1.ebuild, -adchpp-2.11.0.ebuild, -adchpp-2.8.0.ebuild,
+  -adchpp-2.8.1-r3.ebuild, -adchpp-2.9.0-r1.ebuild, -adchpp-2.9.0.ebuild,
+  -files/adchpp-2.8.0-fix_guide_paths.patch,
+  -files/adchpp-2.8.0-fix_python.patch, -files/adchpp-2.8.0-fix_ruby.patch,
+  -files/adchpp-2.9.0-add_SWIGLUA_REF.patch,
+  -files/adchpp-2.9.0-fix_cflags.patch, -files/adchpp-2.9.0-fix_listreg.patch,
+  -files/adchpp-2.9.0-fix_luasockets_guide.patch,
+  -files/adchpp-2.9.0-fix_nullptr.patch:
+  Adding adchpp-2.11.2 and removing old ebuilds
+
+*adchpp-2.11.0-r1 (21 Sep 2013)
+
+  21 Sep 2013; Francisco Blas Izquierdo Riera (klondike) adchpp-2.11.0.ebuild,
+  +adchpp-2.11.0-r1.ebuild:
+  System boost needs 1.52 or higher for the locale-mt lib
+
+*adchpp-2.11.0 (15 Aug 2013)
+
+  15 Aug 2013; Francisco Blas Izquierdo Riera (klondike) +adchpp-2.11.0.ebuild,
+  +files/adchpp-2.11.0-fix_cflags.patch:
+  Update the ebuild to 2.11.0
+
+*adchpp-2.9.0-r1 (10 Feb 2013)
+*adchpp-2.9.0 (10 Feb 2013)
+
+  10 Feb 2013; Francisco Blas Izquierdo Riera (klondike)
+  files/adchpp-2.8.1-fix_cflags.patch, +adchpp-2.9.0.ebuild,
+  +adchpp-2.9.0-r1.ebuild, +files/adchpp-2.9.0-add_SWIGLUA_REF.patch,
+  +files/adchpp-2.9.0-fix_cflags.patch, +files/adchpp-2.9.0-fix_listreg.patch,
+  +files/adchpp-2.9.0-fix_luasockets_guide.patch,
+  +files/adchpp-2.9.0-fix_nullptr.patch:
+  Updating ADCH to 2.9.0, backporting some cool features to -r1 and cleaning a
+  little a patch.
+
+  29 Nov 2012; Francisco Blas Izquierdo Riera (klondike) files/adchpp.init.d:
+  Added support for stacked configurations
+
+  18 Sep 2012; Francisco Blas Izquierdo Riera (klondike) files/adchpp.init.d:
+  Fixing bug in start-stop-daemon call in init file
+
+*adchpp-2.8.1-r3 (17 Sep 2012)
+
+  17 Sep 2012; Francisco Blas Izquierdo Riera (klondike)
+  -adchpp-2.8.1-r2.ebuild, +adchpp-2.8.1-r3.ebuild,
+  +files/adchpp-2.8.1-fix_cflags.patch:
+  Making scons aware of local flags
+
+*adchpp-2.8.1-r2 (19 Aug 2012)
+
+  19 Aug 2012; Francisco Blas Izquierdo Riera (klondike)
+  -adchpp-2.8.1-r1.ebuild, +adchpp-2.8.1-r2.ebuild,
+  +files/adchpp-2.8.1-fix_disconnects.patch:
+  Fixing an issue with disconnects
+
+*adchpp-2.8.1-r1 (19 Aug 2012)
+
+  19 Aug 2012; Francisco Blas Izquierdo Riera (klondike) -adchpp-2.8.1.ebuild,
+  +adchpp-2.8.1-r1.ebuild, +files/adchpp-2.8.1-fix_disconnect_signal.patch:
+  Adding a patch fixing issues with a signal
+
+  14 Aug 2012; Francisco Blas Izquierdo Riera (klondike) adchpp-2.8.0.ebuild,
+  adchpp-2.8.1.ebuild:
+  Fixed issues with FL_DataBase and the log dir
+
+*adchpp-2.8.1 (14 Aug 2012)
+*adchpp-2.8.0 (14 Aug 2012)
+
+  14 Aug 2012; Francisco Blas Izquierdo Riera (klondike) +adchpp-2.8.0.ebuild,
+  +files/adchpp-2.8.0-allow_set_optional_features.patch,
+  +files/adchpp-2.8.0-fix_config_paths.patch,
+  +files/adchpp-2.8.0-fix_doc_includes.patch,
+  +files/adchpp-2.8.0-fix_guide_paths.patch,
+  +files/adchpp-2.8.0-fix_python.patch, +files/adchpp-2.8.0-fix_ruby.patch,
+  +adchpp-2.8.1.ebuild, +files/adchpp-2.8.1-fix_python.patch, +TODO,
+  +files/adchpp.conf.d, +files/adchpp.init.d, +files/adchpp_runner.sh,
+  +metadata.xml:
+  Adding adchpp-2.8.0 and 2.8.1

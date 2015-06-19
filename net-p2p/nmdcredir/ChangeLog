@@ -1,0 +1,18 @@
+# ChangeLog for net-p2p/nmdcredir
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  20 Oct 2014; Francisco Blas Izquierdo Riera (klondike) nmdcredir-1-r1.ebuild:
+  Updating EAPI
+
+*nmdcredir-1-r1 (26 Feb 2013)
+
+  26 Feb 2013; Francisco Blas Izquierdo Riera (klondike) -nmdcredir-1.ebuild,
+  +nmdcredir-1-r1.ebuild, files/nmdcredir.conf.d, files/nmdcredir.init.d:
+  Fix init script
+
+*nmdcredir-1 (26 Feb 2013)
+
+  26 Feb 2013; Francisco Blas Izquierdo Riera (klondike) +nmdcredir-1.ebuild,
+  +files/nmdcredir.conf.d, +files/nmdcredir.init.d, +metadata.xml:
+  Adding nmdcredir

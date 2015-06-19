@@ -1,0 +1,27 @@
+# ChangeLog for dev-python/cef
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  15 Mar 2013; Stijn Tintel (stintel) <stijn+gentoo@linux-ipv6.be>
+  cef-0.5.ebuild:
+  Add missing IUSE="test".
+
+  15 Mar 2013; Stijn Tintel (stintel) <stijn+gentoo@linux-ipv6.be>
+  cef-0.5.ebuild:
+  Update PYTHON_COMPAT after testing against implementations supported by the
+  python-r1 suite.
+
+  12 Mar 2013; Stijn Tintel (stintel) <stijn+gentoo@linux-ipv6.be>
+  cef-0.5.ebuild:
+  Substitute EPYTHON with PYTHON in python_test().
+
+  27 Feb 2013; Stijn Tintel (stintel) <stijn+gentoo@linux-ipv6.be>
+  cef-0.5.ebuild:
+  Drop empty IUSE.
+
+*cef-0.5 (06 Feb 2013)
+
+  06 Feb 2013; Stijn Tintel (stintel) <stijn+gentoo@linux-ipv6.be>
+  +cef-0.5.ebuild, +metadata.xml:
+  Initial import. Ebuild by me.
+

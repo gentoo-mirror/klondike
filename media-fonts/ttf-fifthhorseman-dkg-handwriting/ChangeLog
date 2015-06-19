@@ -1,0 +1,23 @@
+# ChangeLog for media-fonts/ttf-fifthhorseman-dkg-handwriting
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  04 Jun 2015; Francisco Blas Izquierdo Riera (klondike) metadata.xml:
+  Update the metadata.xml with my gentoo e-mail
+
+*ttf-fifthhorseman-dkg-handwriting-0.15 (20 Oct 2014)
+
+  20 Oct 2014; Francisco Blas Izquierdo Riera (klondike)
+  +ttf-fifthhorseman-dkg-handwriting-0.15.ebuild,
+  -ttf-fifthhorseman-dkg-handwriting-0.009.ebuild:
+  Update ttf-fifthhorseman-dkg-handwriting to 0.15
+
+  15 Nov 2012; Francisco Blas Izquierdo Riera (klondike)
+  ttf-fifthhorseman-dkg-handwriting-0.009.ebuild:
+  Removing unnecessary lines
+
+*ttf-fifthhorseman-dkg-handwriting-0.009 (14 Nov 2012)
+
+  14 Nov 2012; Francisco Blas Izquierdo Riera (klondike)
+  +ttf-fifthhorseman-dkg-handwriting-0.009.ebuild, +metadata.xml:
+  Adding the dkg-handwriting font

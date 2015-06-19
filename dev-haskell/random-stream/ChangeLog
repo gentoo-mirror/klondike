@@ -1,0 +1,20 @@
+# ChangeLog for dev-haskell/random-stream
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  04 Jun 2015; Francisco Blas Izquierdo Riera (klondike) metadata.xml:
+  Update the metadata.xml with my gentoo e-mail
+
+  23 Oct 2014; Francisco Blas Izquierdo Riera (klondike)
+  random-stream-0.1.1.ebuild:
+  Update ebuild to last EAPI
+
+  20 Oct 2014; Francisco Blas Izquierdo Riera (klondike) metadata.xml,
+  random-stream-0.1.1.ebuild:
+  Fix some repoman issues
+
+*random-stream-0.1.1 (14 Mar 2011)
+
+  14 Mar 2011; Francisco Blas Izquierdo Riera (klondike)
+  +random-stream-0.1.1.ebuild, +metadata.xml:
+  Initial commit

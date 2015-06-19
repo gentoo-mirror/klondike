@@ -1,0 +1,16 @@
+# ChangeLog for media-sound/jackmaster
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  04 Jun 2015; Francisco Blas Izquierdo Riera (klondike) metadata.xml:
+  Update the metadata.xml with my gentoo e-mail
+
+  23 Oct 2014; Francisco Blas Izquierdo Riera (klondike)
+  jackmaster-0.0.2.ebuild:
+  Update ebuild to last EAPI and fix some build issues
+
+*jackmaster-0.0.2 (01 Oct 2013)
+
+  01 Oct 2013; Francisco Blas Izquierdo Riera (klondike)
+  +jackmaster-0.0.2.ebuild, +files/fix_configure_in.patch, +metadata.xml:
+  Add jackmaster

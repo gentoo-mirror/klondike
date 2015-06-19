@@ -1,0 +1,19 @@
+# ChangeLog for net-p2p/mimicmod
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  23 Oct 2014; Francisco Blas Izquierdo Riera (klondike) mimicmod-9999.ebuild:
+  Fix URL and keywords
+
+  20 Oct 2014; Francisco Blas Izquierdo Riera (klondike) mimicmod-9999.ebuild:
+  Updating EAPI, fixing repoman complaints
+
+  23 Jul 2014; Francisco Blas Izquierdo Riera (klondike) Manifest:
+  Fix init.d
+
+*mimicmod-9999 (29 Mar 2014)
+
+  29 Mar 2014; Francisco Blas Izquierdo Riera (klondike) +mimicmod-9999.ebuild,
+  +files/mimicmod.confd, +files/mimicmod.initd, +files/mimicmod.logrotate,
+  +metadata.xml:
+  Add an ebuild for mimicmod

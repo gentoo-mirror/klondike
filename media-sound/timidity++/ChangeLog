@@ -1,0 +1,20 @@
+# ChangeLog for media-sound/timidity++
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  29 Apr 2015; Francisco Blas Izquierdo Riera (klondike)
+  timidity++-2.14.0-r2.ebuild:
+  Move from app-admin to app-eselect
+
+*timidity++-2.14.0-r2 (22 Sep 2013)
+
+  22 Sep 2013; Francisco Blas Izquierdo Riera (klondike)
+  +files/50timidity++-gentoo.el, +timidity++-2.14.0-r2.ebuild,
+  +files/timidity++-2.14.0-params.patch,
+  +files/timidity++-2.14.0-revert-for-required-ctl_speana_data-function.patch,
+  +files/timidity++-2.14.0-tcltk86.patch, +files/conf.d.timidity.2,
+  +files/init.d.timidity.3, +files/init.d.timidity.4, +files/timidity.cfg-r1,
+  +files/timidity.desktop.2, +files/timidity.service, +files/timidity.xpm,
+  +metadata.xml:
+  Add support for the timidity soundfonts virtual package
+

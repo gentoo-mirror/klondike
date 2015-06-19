@@ -1,0 +1,78 @@
+diff -ur adchpp_2.8.1_source.orig//SConstruct adchpp_2.8.1_source/SConstruct
+--- adchpp_2.8.1_source.orig//SConstruct	2012-09-17 09:30:08.016122458 +0200
++++ adchpp_2.8.1_source/SConstruct	2012-09-17 10:27:40.237129827 +0200
+@@ -6,9 +6,9 @@
+ from build_util import Dev
+ 
+ gcc_flags = {
+-	'common': ['-g', '-Wall', '-Wextra', '-Wno-unused-parameter', '-Wno-missing-field-initializers', '-fexceptions'],
++	'common': ['-fexceptions'],
+ 	'debug': [], 
+-	'release' : ['-O3']
++	'release' : []
+ }
+ 
+ gcc_xxflags = {
+@@ -42,7 +42,7 @@
+ }
+ 
+ gcc_link_flags = {
+-	'common' : ['-g', '-Wl,--no-undefined', '-time'],
++	'common' : ['-Wl,--no-undefined', '-time'],
+ 	'debug' : [],
+ 	'release' : []				
+ }
+@@ -73,6 +73,22 @@
+ langs = ['lua', 'python', 'ruby']
+ 
+ defEnv = Environment(ENV = os.environ)
++
++if 'CC' in os.environ:
++	defEnv.Replace(CC = os.environ['CC'])
++
++if 'CXX' in os.environ:
++	defEnv.Replace(CXX = os.environ['CXX'])
++
++if 'CCFLAGS' in os.environ:
++	defEnv.Replace(CCFLAGS = os.environ['CCFLAGS'].split())
++
++if 'CXXFLAGS' in os.environ:
++	defEnv.Replace(CXXFLAGS = os.environ['CXXFLAGS'].split())
++
++if 'LINKFLAGS' in os.environ:
++	defEnv.Replace(CXXFLAGS = os.environ['LINKFLAGS'].split())
++
+ opts = Variables('custom.py', ARGUMENTS)
+ 
+ if sys.platform == 'win32':
+@@ -107,6 +123,21 @@
+ 
+ env = Environment(ENV = os.environ, tools = [defEnv['tools'], 'swig'], toolpath = ['tools'], options = opts, TARGET_ARCH = TARGET_ARCH, MSVS_ARCH = TARGET_ARCH)
+ 
++if 'CC' in os.environ:
++	env.Replace(CC = os.environ['CC'])
++
++if 'CXX' in os.environ:
++	env.Replace(CXX = os.environ['CXX'])
++
++if 'CCFLAGS' in os.environ:
++	env.Replace(CCFLAGS = os.environ['CCFLAGS'].split())
++
++if 'CXXFLAGS' in os.environ:
++	env.Replace(CXXFLAGS = os.environ['CXXFLAGS'].split())
++
++if 'LINKFLAGS' in os.environ:
++	env.Replace(CXXFLAGS = os.environ['LINKFLAGS'].split())
++
+ # filter out boost from dependencies to get a speedier rebuild scan
+ # this means that if boost changes, scons -c needs to be run
+ # delete .sconsign.dblite to see the effects of this if you're upgrading
+@@ -139,8 +170,6 @@
+ 
+ 	if env['savetemps']:
+ 		env.Append(CCFLAGS = ['-save-temps', '-fverbose-asm'])
+-	else:
+-		env.Append(CCFLAGS = ['-pipe'])
+ 
+ if env['CC'] == 'cl': # MSVC
+ 	flags = msvc_flags
