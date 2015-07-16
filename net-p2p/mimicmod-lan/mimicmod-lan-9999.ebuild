@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -17,6 +17,7 @@ IUSE="debug +ssl systemd"
 #S="${WORKDIR}/uhub"
 
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.8 )
+	dev-db/sqlite:3
 	!net-p2p/uhub
 	!net-p2p/mimicmod"
 DEPEND="${RDEPEND}
