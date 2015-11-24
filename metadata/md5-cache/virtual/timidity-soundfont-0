@@ -1,0 +1,9 @@
+DEFINED_PHASES=-
+DESCRIPTION=Soundfont for timidity including instruments and drums
+EAPI=5
+KEYWORDS=~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+PDEPEND=|| ( media-sound/timidity-eawpatches media-sound/timidity-freepats media-sound/fluid-soundfont[timidity] )
+RDEPEND=app-eselect/eselect-timidity
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=2dc485df2acbbcab8f06c40dce7202ce
