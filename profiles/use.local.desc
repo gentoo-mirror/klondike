@@ -2,24 +2,3 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
-dev-haskell/random-stream:openssl - Uses dev-libs/openssl as the random data source
-dev-haskell/random-stream:urandom - Uses /dev/urandom as the random data source
-media-fonts/ttf-fifthhorseman-dkg-handwriting:fontforge - Use fontforge to build the ttf files
-net-libs/gnutls:crywrap - Build the crywrap TLS proxy service
-net-libs/gnutls:dane - Build libgnutls-dane, implementing DNS-based Authentication of Named Entities. Requires net-dns/unbound.
-net-libs/gnutls:pkcs11 - Add support for PKCS#11 through app-crypt/p11-kit
-net-misc/i2pd:i2p-hardening - Compile with hardening on vanilla compilers/linkers
-net-misc/i2pd:library - Build the libi2pd library
-net-p2p/adchpp:bloom - Build the bloom extension
-net-p2p/adchpp:script - Build the scripting extension
-net-p2p/adchpp:systemboost - Use the system's boost libraries (dev-libs/boost) instead of the bundled ones
-net-p2p/adchpp:systemlua - Use the system's lua libraries (dev-lang/lua) instead of the embedded ones
-net-p2p/adchpp-lan:bloom - Build the bloom extension
-net-p2p/adchpp-lan:script - Build the scripting extension
-net-p2p/adchpp-lan:systemboost - Use the system's boost libraries (dev-libs/boost) instead of the bundled ones
-net-p2p/adchpp-lan:systemlua - Use the system's lua libraries (dev-lang/lua) instead of the embedded ones
-www-misc/mozilla-sync-server-core:memcached - Add support for net-misc/memcached
-www-misc/mozilla-sync-server-full:memcached - Add support for net-misc/memcached
-www-misc/mozilla-sync-server-full:tools - Add a tool using dev-python/fabric
-www-misc/mozilla-sync-server-full:wsgi - Install wsgi file to enable serving via www-apache/mod_wsgi or www-servers/uwsgi
-www-misc/mozilla-sync-server-storage:memcached - Add support for net-misc/memcached
