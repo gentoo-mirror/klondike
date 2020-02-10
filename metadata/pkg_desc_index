@@ -13,10 +13,7 @@ net-misc/bti 034: A command line twitter/identi.ca client
 net-p2p/adchpp 2.11.2: ADC protocol hub made by the people behind DC++
 net-p2p/adchpp-lan 9999: ADC protocol hub made by the people behind DC++ and modified for use at lan parties
 net-p2p/linuxdcpp 1.1.0: Direct connect client, looks and works like famous DC++
-net-p2p/mimicmod 9999: Mod of an high performance peer-to-peer hub for the ADC network
-net-p2p/mimicmod-lan 9999: Lan focused mod of an high performance peer-to-peer hub for the ADC network
 net-p2p/nmdcredir 1-r1: Simple C NMDC redirector using threads
-net-p2p/uhub 9999: An high performance peer-to-peer hub for the ADC network
 sys-apps/rng-tools 5: Daemon to use hardware random number generators
 virtual/timidity-soundfont 0: Soundfont for timidity including instruments and drums
 www-misc/mozilla-sync-server-core 2.15.1: Mozilla Sync Server Core libraries
