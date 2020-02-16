@@ -4,10 +4,10 @@ DESCRIPTION=Direct connect client, looks and works like famous DC++
 EAPI=5
 HOMEPAGE=https://launchpad.net/linuxdcpp
 IUSE=debug +libnotify
-KEYWORDS=~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
 LICENSE=GPL-2
 RDEPEND=>=gnome-base/libglade-2.4:2.0 >=x11-libs/gtk+-2.12:2 app-arch/bzip2 dev-libs/boost dev-libs/openssl libnotify? ( >=x11-libs/libnotify-0.4.1 ) sys-libs/zlib
 SLOT=0
 SRC_URI=http://launchpad.net/linuxdcpp/1.1/1.1.0/+download/linuxdcpp-1.1.0.tar.bz2
 _eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	ed88001f77c6dd0d5f09e45c1a5b480e	estack	686eaab303305a908fd57b2fd7617800	eutils	fcb2aa98e1948b835b5ae66ca52868c5	ltprune	2729691420b6deeda2a90b1f1183fb55	multilib	1d91b03d42ab6308b5f4f6b598ed110e	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
-_md5_=a27fac765194a35f6def3549abe2628d
+_md5_=8d6336f392d9f4d968d6af87c7f888c8
