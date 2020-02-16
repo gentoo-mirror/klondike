@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
+	<maintainer type="person">
 		<email>klondike@gentoo.org</email>
 		<name>Francisco Blas Izquierdo Riera</name>
 	</maintainer>
 	<use>
 		<flag name="bloom">
-      			Build the bloom extension
+			Build the bloom extension
 		</flag>
 		<flag name="script">
-      			Build the scripting extension
+			Build the scripting extension
 		</flag>
 		<flag name="systemlua">
-      			Use the system's lua libraries (dev-lang/lua) instead of the embedded ones
+			Use the system's lua libraries (dev-lang/lua) instead of the embedded ones
 		</flag>
 		<flag name="systemboost">
 			Use the system's boost libraries (dev-libs/boost) instead of the bundled ones

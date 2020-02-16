@@ -1,3 +1,6 @@
+  16 Feb 2020;  <klondike@gentoo.org> metadata.xml, uhub-9999.ebuild:
+  Fix some QA issues
+
 *uhub-9999 (23 Oct 2014)
 
   23 Oct 2014; Francisco Blas Izquierdo Riera (klondike) +files/uhub.confd,

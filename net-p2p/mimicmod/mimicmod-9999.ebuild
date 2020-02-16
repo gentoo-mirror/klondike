@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 EAPI=5
-inherit git-2 cmake-utils eutils user
+inherit git-r3 cmake-utils eutils user
 
 DESCRIPTION="Mod of an high performance peer-to-peer hub for the ADC network"
 HOMEPAGE="http://uhub.mimic.cz/"
@@ -13,8 +12,6 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug +ssl systemd"
-
-S="${WORKDIR}/uhub"
 
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.8 )
 	!net-p2p/uhub"
