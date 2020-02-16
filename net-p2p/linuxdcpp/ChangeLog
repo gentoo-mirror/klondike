@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/linuxdcpp
-# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2020 Gentoo Authors; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.43 2011/03/28 14:30:10 nirbheek Exp $
+
+  16 Feb 2020;  <klondike@gentoo.org> linuxdcpp-1.1.0.ebuild, metadata.xml:
+  Fix some QA issues
 
   04 Jun 2015; Francisco Blas Izquierdo Riera (klondike) metadata.xml:
   Update the metadata.xml with my gentoo e-mail

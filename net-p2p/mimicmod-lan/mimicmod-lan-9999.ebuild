@@ -1,9 +1,8 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 EAPI=5
-inherit git-2 cmake-utils eutils user
+inherit git-r3 cmake-utils eutils user
 
 DESCRIPTION="Lan focused mod of an high performance peer-to-peer hub for the ADC network"
 HOMEPAGE="http://uhub.mimic.cz/"
