@@ -69,8 +69,7 @@ src_configure(){
 
 src_compile() {
 	export CC INSTALL_BIN PREFIX PKGCFGDIR LIBDIRARCH LIBARCHS CFLAGS LDFLAGS
-	UNICORN_QEMU_FLAGS="--python=/usr/bin/python3" \
-		UNICORN_ARCHS="${unicorn_targets}" \
+	UNICORN_ARCHS="${unicorn_targets}" \
 		UNICORN_STATIC="$(use static-libs && echo yes || echo no)" \
 		emake
 	wrap_python ${FUNCNAME}
@@ -83,6 +82,9 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" LIBDIR="/usr/$(get_libdir)" UNICORN_STATIC="$(use static-libs && echo yes || echo no)" install
+	UNICORN_ARCHS="${unicorn_targets}" \
+		UNICORN_STATIC="$(use static-libs && echo yes || echo no)" \
+		emake DESTDIR="${D}" LIBDIR="/usr/$(get_libdir)" \
+		install
 	wrap_python ${FUNCNAME}
 }
