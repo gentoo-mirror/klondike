@@ -1,0 +1,4 @@
+*unicorn-1.0.2_rc4 (22 Jun 2020)
+
+  22 Jun 2020;  <klondike@gentoo.org> +metadata.xml, +unicorn-1.0.2_rc4.ebuild:
+  dev-util/unicorn:
