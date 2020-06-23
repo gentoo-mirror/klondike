@@ -5,6 +5,8 @@ dev-python/metlog-cef 0.2: CEF extensions to metrics logging
 dev-python/metlog-py 0.10.0: Metrics Logging
 dev-python/repoze-who 2.0: identification and authentication framework for WSGI.
 dev-python/scrypt 0.6.1: Bindings for the scrypt key derivation function library
+dev-util/berbalang 9999: berbalang an AIMEE project to find and evaluate rop gadgets using AI.
+dev-util/unicorn 1.0.2_rc4: A lightweight multi-platform, multi-architecture CPU emulator framework
 media-fonts/ttf-fifthhorseman-dkg-handwriting 0.15: A font that imitates Daniel Kahn Gillmor's handwriting
 media-sound/jackmaster 0.0.2: JACK audio mixer using GTK2 interface and made in C.
 media-sound/timidity++ 2.14.0-r2: A handy MIDI to WAV converter with OSS and ALSA output support

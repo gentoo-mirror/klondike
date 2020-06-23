@@ -4,6 +4,12 @@
 
 dev-haskell/random-stream:openssl - Uses dev-libs/openssl as the random data source
 dev-haskell/random-stream:urandom - Uses /dev/urandom as the random data source
+dev-util/unicorn:unicorn_targets_aarch64 - Use the aarch64 architecture
+dev-util/unicorn:unicorn_targets_arm - Use the arm architecture
+dev-util/unicorn:unicorn_targets_m68k - Use the m68k architecture
+dev-util/unicorn:unicorn_targets_mips - Use the mips architecture
+dev-util/unicorn:unicorn_targets_sparc - Use the sparc architecture
+dev-util/unicorn:unicorn_targets_x86 - Use the x86 architecture
 media-fonts/ttf-fifthhorseman-dkg-handwriting:fontforge - Use fontforge to build the ttf files
 net-libs/gnutls:crywrap - Build the crywrap TLS proxy service
 net-libs/gnutls:dane - Build libgnutls-dane, implementing DNS-based Authentication of Named Entities. Requires net-dns/unbound.
