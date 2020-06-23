@@ -1,0 +1,4 @@
+*berbalang-9999 (22 Jun 2020)
+
+  22 Jun 2020;  <klondike@gentoo.org> +berbalang-9999.ebuild, +metadata.xml:
+  dev-util/berbalang: Initial version
