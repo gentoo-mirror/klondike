@@ -4,11 +4,11 @@
 EAPI=5
 SCONS_MIN_VERSION=1.2.0
 
-inherit eutils user scons-utils toolchain-funcs bzr
+inherit eutils user scons-utils toolchain-funcs git-r3
 
 DESCRIPTION="ADC protocol hub made by the people behind DC++ and modified for use at lan parties"
 HOMEPAGE="http://dc4lan.sourceforge.net/"
-EBZR_REPO_URI="lp:adchpp-lan"
+EGIT_REPO_URI="https://github.com/klondi/adch-lan.git"
 S="${WORKDIR}/${P}"
 LICENSE="GPL-2"
 SLOT="0"
