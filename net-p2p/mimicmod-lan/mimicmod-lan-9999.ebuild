@@ -7,7 +7,7 @@ inherit git-r3 cmake-utils eutils user
 DESCRIPTION="Lan focused mod of an high performance peer-to-peer hub for the ADC network"
 HOMEPAGE="http://uhub.mimic.cz/"
 SRC_URI=""
-EGIT_REPO_URI="git://github.com/klondi/mimicmod-lan"
+EGIT_REPO_URI="https://github.com/klondi/mimicmod-lan"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
