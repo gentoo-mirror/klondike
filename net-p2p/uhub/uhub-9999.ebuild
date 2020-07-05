@@ -7,7 +7,7 @@ inherit git-r3 cmake-utils eutils user
 DESCRIPTION="An high performance peer-to-peer hub for the ADC network"
 HOMEPAGE="http://uhub.org/"
 SRC_URI=""
-EGIT_REPO_URI="git://github.com/janvidar/uhub"
+EGIT_REPO_URI="https://github.com/janvidar/uhub"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
