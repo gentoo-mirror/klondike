@@ -10,8 +10,6 @@ dev-util/unicorn 1.0.2_rc4: A lightweight multi-platform, multi-architecture CPU
 media-fonts/ttf-fifthhorseman-dkg-handwriting 0.15: A font that imitates Daniel Kahn Gillmor's handwriting
 media-sound/jackmaster 0.0.2: JACK audio mixer using GTK2 interface and made in C.
 media-sound/timidity++ 2.14.0-r2: A handy MIDI to WAV converter with OSS and ALSA output support
-net-libs/gnutls 3.2.18-r1: A TLS 1.2 and SSL 3.0 implementation for the GNU project
-net-misc/bti 034: A command line twitter/identi.ca client
 net-p2p/adchpp 2.11.2: ADC protocol hub made by the people behind DC++
 net-p2p/adchpp-lan 9999: ADC protocol hub made by the people behind DC++ and modified for use at lan parties
 net-p2p/linuxdcpp 1.1.0: Direct connect client, looks and works like famous DC++
