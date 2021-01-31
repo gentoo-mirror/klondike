@@ -1,10 +1,4 @@
 dev-haskell/random-stream 0.1.1: An infinite stream of random data
-dev-python/cef 0.5: Module that emits CEF logs
-dev-python/docopt 0.6.1: Pythonic argument parser, that will make you smile
-dev-python/metlog-cef 0.2: CEF extensions to metrics logging
-dev-python/metlog-py 0.10.0: Metrics Logging
-dev-python/repoze-who 2.0: identification and authentication framework for WSGI.
-dev-python/scrypt 0.6.1: Bindings for the scrypt key derivation function library
 dev-util/berbalang 9999: berbalang an AIMEE project to find and evaluate rop gadgets using AI.
 dev-util/unicorn 1.0.2_rc4: A lightweight multi-platform, multi-architecture CPU emulator framework
 media-fonts/ttf-fifthhorseman-dkg-handwriting 0.15: A font that imitates Daniel Kahn Gillmor's handwriting
@@ -19,8 +13,4 @@ net-p2p/nmdcredir 1-r1: Simple C NMDC redirector using threads
 net-p2p/uhub 9999: An high performance peer-to-peer hub for the ADC network
 sys-apps/rng-tools 5: Daemon to use hardware random number generators
 virtual/timidity-soundfont 0: Soundfont for timidity including instruments and drums
-www-misc/mozilla-sync-server-core 2.15.1: Mozilla Sync Server Core libraries
-www-misc/mozilla-sync-server-full 1.0.9: Mozilla Sync Server
-www-misc/mozilla-sync-server-reg 1.2.6-r1: Mozilla Sync Reg Server
-www-misc/mozilla-sync-server-storage 1.17.1: Mozilla Sync Storage Server
 x11-themes/oxygen-gtk3 1.4.0: Official GTK+:3 port of KDE's Oxygen widget style
