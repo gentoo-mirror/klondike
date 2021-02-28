@@ -19,8 +19,3 @@ net-p2p/adchpp-lan:bloom - Build the bloom extension
 net-p2p/adchpp-lan:script - Build the scripting extension
 net-p2p/adchpp-lan:systemboost - Use the system's boost libraries (dev-libs/boost) instead of the bundled ones
 net-p2p/adchpp-lan:systemlua - Use the system's lua libraries (dev-lang/lua) instead of the embedded ones
-www-misc/mozilla-sync-server-core:memcached - Add support for net-misc/memcached
-www-misc/mozilla-sync-server-full:memcached - Add support for net-misc/memcached
-www-misc/mozilla-sync-server-full:tools - Add a tool using dev-python/fabric
-www-misc/mozilla-sync-server-full:wsgi - Install wsgi file to enable serving via www-apache/mod_wsgi or www-servers/uwsgi
-www-misc/mozilla-sync-server-storage:memcached - Add support for net-misc/memcached
