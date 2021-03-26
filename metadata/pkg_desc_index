@@ -1,7 +1,6 @@
 dev-haskell/random-stream 0.1.1: An infinite stream of random data
 dev-util/berbalang 9999: berbalang an AIMEE project to find and evaluate rop gadgets using AI.
 dev-util/unicorn 1.0.2_rc4: A lightweight multi-platform, multi-architecture CPU emulator framework
-media-fonts/ttf-fifthhorseman-dkg-handwriting 0.15: A font that imitates Daniel Kahn Gillmor's handwriting
 media-sound/jackmaster 0.0.2: JACK audio mixer using GTK2 interface and made in C.
 media-sound/timidity++ 2.14.0-r2: A handy MIDI to WAV converter with OSS and ALSA output support
 net-p2p/adchpp 2.11.2: ADC protocol hub made by the people behind DC++
