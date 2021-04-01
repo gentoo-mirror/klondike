@@ -1,0 +1,13 @@
+BDEPEND=fontforge? ( media-gfx/fontforge[unicode] ) X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=compile install postinst postrm setup
+DESCRIPTION=A font that imitates Daniel Kahn Gillmor's handwriting
+EAPI=7
+HOMEPAGE=http://lair.fifthhorseman.net/~dkg/fonts/dkg-handwriting/
+INHERIT=font
+IUSE=fontforge X
+KEYWORDS=~amd64 ~x86
+LICENSE=OFL-1.1
+SLOT=0
+SRC_URI=https://dev.gentoo.org/~klondike/ttf-fifthhorseman-dkg-handwriting/ttf-fifthhorseman-dkg-handwriting-0.15.tar.xz
+_eclasses_=font	0667878c2b594871023dd1833d05996f
+_md5_=45825d1fb29baf122ee42c6074c74a2a
