@@ -1,4 +1,5 @@
 dev-haskell/random-stream 0.1.1: An infinite stream of random data
+dev-python/twitter 9999: An API and command-line toolset for Twitter (twitter.com)
 dev-util/berbalang 9999: berbalang an AIMEE project to find and evaluate rop gadgets using AI.
 dev-util/unicorn 1.0.2_rc4: A lightweight multi-platform, multi-architecture CPU emulator framework
 media-fonts/ttf-fifthhorseman-dkg-handwriting 0.15: A font that imitates Daniel Kahn Gillmor's handwriting
