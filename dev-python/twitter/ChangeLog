@@ -1,0 +1,4 @@
+*twitter-9999 (14 Apr 2021)
+
+  14 Apr 2021;  <klondike@gentoo.org> +metadata.xml, +twitter-9999.ebuild:
+  dev-python/twitter: add live ebuild
