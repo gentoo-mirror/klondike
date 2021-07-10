@@ -1,7 +1,7 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=7
 
 inherit eutils fcaps
 
@@ -17,14 +17,15 @@ IUSE=""
 
 FILECAPS=( -g nmdcredir -m 710 -M 710 cap_net_bind_service usr/bin/${PN} )
 
-RDEPEND=""
+RDEPEND="
+	acct-group/nmdcredir
+	acct-user/nmdcredir
+"
 DEPEND="${RDEPEND}"
-
-pkg_setup() {
-	#Create the users
-	enewgroup nmdcredir
-	enewuser nmdcredir -1 -1 -1 "nmdcredir"
-}
+BDEPEND="
+	acct-group/nmdcredir
+	acct-user/nmdcredir
+"
 
 src_install() {
 	dobin ${PN}

@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/nmdcredir
-# Copyright 1999-2020 Gentoo Authors; Distributed under the GPL v2
+# Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
+
+*nmdcredir-1-r2 (10 Jul 2021)
+
+  10 Jul 2021;  <klondike@gentoo.org> +nmdcredir-1-r2.ebuild,
+  -nmdcredir-1-r1.ebuild, files/nmdcredir.init.d:
+  net-p2p/nmdcredir: Move to EAPI=7
 
   16 Feb 2020;  <klondike@gentoo.org> metadata.xml, nmdcredir-1-r1.ebuild:
   Fix some QA issues
