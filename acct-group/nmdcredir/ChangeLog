@@ -1,0 +1,4 @@
+*nmdcredir-0 (10 Jul 2021)
+
+  10 Jul 2021;  <klondike@gentoo.org> +metadata.xml, +nmdcredir-0.ebuild:
+  acct-group/nmdcredir: Add group for nmdcredir
