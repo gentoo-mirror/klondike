@@ -1,3 +1,5 @@
+acct-group/nmdcredir 0: group for nmdcredir
+acct-user/nmdcredir 0: user for nmdcredir
 dev-haskell/random-stream 0.1.1: An infinite stream of random data
 dev-python/twitter 9999: An API and command-line toolset for Twitter (twitter.com)
 dev-util/berbalang 9999: berbalang an AIMEE project to find and evaluate rop gadgets using AI.
@@ -10,6 +12,7 @@ net-p2p/adchpp-lan 9999: ADC protocol hub made by the people behind DC++ and mod
 net-p2p/linuxdcpp 1.1.0: Direct connect client, looks and works like famous DC++
 net-p2p/mimicmod 9999: Mod of an high performance peer-to-peer hub for the ADC network
 net-p2p/mimicmod-lan 9999: Lan focused mod of an high performance peer-to-peer hub for the ADC network
+net-p2p/nmdcredir 1-r2: Simple C NMDC redirector using threads
 net-p2p/uhub 9999: An high performance peer-to-peer hub for the ADC network
 sys-apps/rng-tools 5: Daemon to use hardware random number generators
 virtual/timidity-soundfont 0: Soundfont for timidity including instruments and drums
